@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = ['Rock', 'Paper', 'Scissor'];
+
+        //computer's randomly generated selection
+        function computerPlay(){
+          return arr[Math.floor(Math.random()*3)];
+        }
+
+        //taking input from player
+        function playerPlay(){
+            var player = window.prompt("Enter your selection:");
+            player =player.toLowerCase();
+            console.log(player);
+            if(player == 'rock' || player == 'paper' || player == 'scissor'){
+                return player.charAt(0).toUpperCase()+player.slice(1);
+            }
+            alert("Invalid selection");
+            return playerPlay();
+        }
+
+        //main game
+        function game(){
+            var compCount = 0;
+            var humCount = 0;
+            while(1){
+                console.log("Computer count=",compCount, "Player Count=",humCount);
+                var computer = computerPlay();
+                var human = playerPlay();
+                if((computer==arr[0] && human==arr[2]) ||(computer==arr[1] && human==arr[0]) || (computer==arr[2] && human==arr[1])){
+                    compCount++;
+                }
+                else if((human==arr[0] && computer==arr[2]) ||(human==arr[1] && computer==arr[0]) || (human==arr[2] && computer==arr[1])){
+                    humCount++;
+                }
+                else{
+                    continue;
+                }
+                if(compCount == 3){
+                    console.log("Computer count=",compCount, "Player Count=",humCount);
+                return "Computer wins";
+            }
+                else if(humCount==3){
+                    console.log("Computer count=",compCount, "Player Count=",humCount);
+                return "Player wins";
+            }
+        }
+            }
+            
+    </script>
+</body>
+</html>

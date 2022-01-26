@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[1,2,3,4,5,6,7,8,9];
+        var n;
+        var mid;
+        var binarySearch = function(arr, n){
+            var left=0;
+            var right= arr.length-1;
+            while(left<=right){
+                mid= (left+right)/2;
+                if(arr[mid]<n){
+                    left=mid+1;
+                }
+                else{
+                    right=mid;
+                }
+            }
+            if(arr[left]==n){
+                return left;
+            }
+            else{
+                return -1;
+            }
+        }
+    </script>
+</body>
+</html>

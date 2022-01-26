@@ -31,10 +31,12 @@
         function game(){
             var compCount = 0;
             var humCount = 0;
+
             while(1){
                 console.log("Computer count=",compCount, "Player Count=",humCount);
                 var computer = computerPlay();
                 var human = playerPlay();
+
                 if((computer==arr[0] && human==arr[2]) ||(computer==arr[1] && human==arr[0]) || (computer==arr[2] && human==arr[1])){
                     compCount++;
                 }
@@ -44,16 +46,17 @@
                 else{
                     continue;
                 }
+
                 if(compCount == 3){
                     console.log("Computer count=",compCount, "Player Count=",humCount);
                 return "Computer wins";
-            }
+                }
                 else if(humCount==3){
                     console.log("Computer count=",compCount, "Player Count=",humCount);
                 return "Player wins";
+                }
             }
         }
-            }
             
     </script>
 </body>

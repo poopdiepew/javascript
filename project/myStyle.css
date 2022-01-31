@@ -22,6 +22,7 @@ body{
     flex: 1;
 }
 
+//normal class
 .key{
     max-width: 100px;
     flex: 1 0 0;
@@ -37,6 +38,7 @@ body{
 
 }
 
+//class for when a key is pressed
 .play{
     transform: scale(1.1);
     border: 10px solid yellow;

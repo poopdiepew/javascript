@@ -21,7 +21,7 @@ search.style.overflowWrap = 'true';
 search.style.textOverflow = 'false';
 search.style.height = '200px';
 search.style.width =  '600px';
-search.style.fontSize = '20px';
+search.style.fontSize = '24px';
 search.style.borderRadius = '16px';
 
 const submit = document.createElement('button');
@@ -39,7 +39,7 @@ const output = document.createElement('textArea');
 output.style.textOverflow = 'false';
 output.style.height = '200px';
 output.style.width =  '600px';
-output.style.fontSize = '20px';
+output.style.fontSize = '24px';
 output.readOnly = 'true';
 output.style.borderRadius = '16px';
 
